@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-color:#eae8dc;">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark  nav_bg">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-1 mt-1">
+          <img src="/static/pics/logo.png" style="width:10rem;height:2rem;"  class="mb-1" alt="logo">
+      </ul>
+    <ul class="navbar-nav ml-auto">
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+<!--      </li>-->
+        <li class="nav-item active">
+        <a class="nav-link wh" href="" >Home </a>
+      </li>
+          <li class="nav-item active">
+        <a class="nav-link wh" href="#section2" >About me</a>
+      </li>
+
+          <li class="nav-item active">
+        <a class="nav-link wh" href="#section4" >Services</a>
+      </li>
+
+          <li class="nav-item active">
+        <a class="nav-link wh" href="#section5" >Skills </a>
+      </li>
+
+          <li class="nav-item active">
+        <a class="nav-link wh" href="#section6" >Projects </a>
+      </li>
+
+          <li class="nav-item active">
+        <a class="nav-link wh" href="#section7" >Contact me </a>
+      </li>
+
+
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+<div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+
+
+    <div class="row">
+
+
+       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</div>
+
+
+<!--# slider-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-4">
+
+            <div class="carousel slide" id="demo-carousel" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    {% for photo in pics %}
+                    {% if forloop.first %}
+                    <div class="carousel-item active">
+                        {% else %}
+                        <div class="carousel-item">
+                            {% endif %}
+                            {% if photo.image %}
+                            <img class="img-responsive center-block" src='{{ photo.image.url }}' alt="Image"
+                                 style="width:100%;height:600px;">
+                            {% endif %}
+
+                        </div>
+                        {%endfor%}
+                    </div>
+                    <div class="text-center mt-1">
+                    <a class="left carousel-control btn btn-secondary" href="#demo-carousel" role="button" data-slide="prev" style="width:8rem;margin-right:1rem;">
+                        Previous</a>
+                    <a class="right btn btn-secondary" href="#demo-carousel" role="button" data-slide="next" style="width:8rem;margin-right:1rem;">
+                        Next</a>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div id="section1" class="section">
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 co-sm-12 col-md-6 col-lg-6">-->
+<!--                <img src="" class="img-fluid text-center" alt="Responsive image"-->
+<!--                     style="width:100%;height:600px;margin-left:5rem;">-->
+<!--            </div>-->
+<!--            <div class="col-12 co-sm-12 col-md-6 col-lg-6">-->
+<!--                <div class="text-center">-->
+<!--                    <img src="" class="img-fluid text-center" alt="Responsive image"-->
+<!--                         style="width:100%;height:600px;margin-left:5rem;">-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+</div>
+
+<div id="section2" class="section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="text-center">
+                    <img src="/static/pics/aboutme.png" class="img-fluid  " alt="Responsive image"
+                         style="width:20rem;height:4rem;">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                    <div class="text-center">
+
+                        <p class="text-justify alltext mt-3" style="color:black;"><b>Nobody knows really what they’re doing and there’s two ways to
+                            go with that information. One is to be afraid and the other is to be liberated, and I choose
+                            to be liberated by it</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="text-center">
+
+                    <table class="table " style="background-color:#a0a0a7;color:white;width:30rem;margin-left:30%;">
+
+                        <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>Amal J S</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>amaljs00013@gmail.com</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone</th>
+                            <td>8921142788</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>Amal J S</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div id="section3" class="section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="text-center">
+                    <img src="/static/pics/Educational.png" class="img-fluid  " alt="Responsive image"
+                         style="width:20rem;height:4rem;">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 section">
+                <div class="card text-center" style="background-color:#343434;">
+                    <div class="card-header" style="color:#e05a51;font-size:2rem;height:6rem;">
+                        Metriculation
+                    </div>
+                    <div class="card-body" style="color:white;">
+                        <h5 class="card-title">2014-2015</h5>
+                        <h5 class="card-title"></h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 section">
+                <div class="card text-center" style="background-color:#343434;">
+                    <div class="card-header" style="color:#e05a51;font-size:2rem;height:6rem;">
+                        Higher Secondary
+                    </div>
+                    <div class="card-body" style="color:white;">
+                        <h5 class="card-title">2015-2017</h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 section">
+                <div class="card text-center" style="background-color:#343434;">
+                    <div class="card-header" style="color:#e05a51;font-size:2rem;height:6rem;">
+                        Diploma in Mechanical Engineering
+                    </div>
+                    <div class="card-body" style="color:white;">
+                        <h5 class="card-title">2017-2020</h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 section">
+                <div class="card text-center" style="background-color:#343434;">
+                    <div class="card-header" style="color:#e05a51;font-size:2rem;height:6rem;">
+                        Certified Cyber Security Analyst
+                    </div>
+                    <div class="card-body" style="color:white;">
+                        <h5 class="card-title">2021 August - 2022 March</h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 section" style="">
+                <div class="card text-center" style="background-color:#343434;">
+                    <div class="card-header" style="color:#e05a51;font-size:2rem;height:6rem;">
+                        NPTEL - Ethical Hacking
+                    </div>
+                    <div class="card-body" style="color:white;">
+                        <h5 class="card-title">2022 Januvary - 2022 April</h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="section4" class="section mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="text-center">
+                    <img src="/static/pics/certifications.png" class="img-fluid  " alt="Responsive image"
+                         style="width:20rem;height:4rem;">
+
+                </div>
+            </div>
+        </div>
+        <div class="row section" style="height:8rem;">
+            <div class="col-md-4 text-center d-flex mb-3">
+                <div class="card" style="color:white;background-color:#343434;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Web Developer</h5>
+                        <p class="card-text mb-3">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center d-flex mb-3">
+                <div class="card" style="color:white;background-color:#343434;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Programmer</h5>
+                        <p class="card-text mb-3">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center d-flex mb-3">
+                <div class="card" style="color:white;background-color:#343434;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Cyber Security Analyst</h5>
+                        <p class="card-text mb-5">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="section5" class="section" style="margin-top:8rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="text-center">
+                    <img src="/static/pics/myskills.png" class="img-fluid  " alt="Responsive image"
+                         style="width:20rem;height:4rem;margin-bottom:3rem;">
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row ">
+
+
+
+
+
+
+
+
+
+
+             <div class="col-12 col-sm-12 col-md-4 col-lg-6 bg-dark p-3 rounded mt-2">
+
+<div class="text-start text_skills">
+                    <p>Html</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;font-size:1rem;"
+                         aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100">80%
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6 bg-dark p-3 rounded mt-2">
+<div class="text-start text_skills">
+                    <p>CSS</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;font-size:1rem;"
+                         aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100">80%
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6 bg-dark p-3 rounded section">
+ <div class="text-start text_skills">
+                    <p>Python</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;font-size:1rem;"
+                         aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100">75%
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6 bg-dark p-3 rounded section">
+ <div class="text-start text_skills ">
+                    <p>Django</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;font-size:1rem;"
+                         aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100">70%
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+</div>
+    </div>
+
+
+<div id="section6" class="section" style="margin-top:8rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="text-center">
+                    <img src="/static/pics/myprojects.png" class="img-fluid mb-3 " alt="Responsive image"
+                         style="width:20rem;height:4rem;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6">
+
+
+                <a href="https://amaljs003.pythonanywhere.com/ecom/">
+                    <div class="card" style="color:white;background-color:#343434;padding:1rem;">
+
+                        <div class="card-body ">
+                            <div class="text-center" style="color:white;">
+                                <h5 class="card-title">Ecommerce App</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+
+
+                            <div class="text-start">
+                                <a href="https://amaljs003.pythonanywhere.com/ecom/" class="btn btn-success">Website</a>
+                            </div>
+                            <div class="text-end" style="margin-left:60%;">
+                                <a href="https://github.com/amaljs/Ecommerce_App" class="btn btn-success">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6">
+
+
+                <a href="http://amaljs001.pythonanywhere.com/">
+                    <div class="card" style="color:white;background-color:#343434;padding:1rem;">
+
+                        <div class="card-body ">
+                            <div class="text-center" style="color:white;">
+                                <h5 class="card-title">Todo App</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+
+
+                            <div class="text-start">
+                                <a href="http://amaljs001.pythonanywhere.com/" class="btn btn-success">Website</a>
+                            </div>
+                            <div class="text-end" style="margin-left:60%;">
+                                <a href="https://github.com/amaljs/Todo_App" class="btn btn-success">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6">
+
+
+                <a href="https://amaljs.pythonanywhere.com/#">
+                    <div class="card" style="color:white;background-color:#343434;padding:1rem;margin-top:1rem;">
+
+                        <div class="card-body ">
+                            <div class="text-center" style="color:white;">
+                                <h5 class="card-title">Bike App</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+
+
+                            <div class="text-start">
+                                <a href="https://amaljs.pythonanywhere.com/#" class="btn btn-success">Website</a>
+                            </div>
+                            <div class="text-end" style="margin-left:60%;">
+                                <a href="https://github.com/amaljs/Bike_app" class="btn btn-success">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6">
+
+
+                <a href="https://amaljs002.pythonanywhere.com/">
+                    <div class="card" style="color:white;background-color:#343434;padding:1rem;margin-top:1rem;">
+
+                        <div class="card-body ">
+                            <div class="text-center" style="color:white;">
+                                <h5 class="card-title">Travel App</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+
+
+                            <div class="text-start">
+                                <a href="https://amaljs002.pythonanywhere.com/" class="btn btn-success">Website</a>
+                            </div>
+                            <div class="text-end" style="margin-left:60%;">
+                                <a href="https://github.com/amaljs/Travel_App" class="btn btn-success">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="section7" class="section" style="margin-top:8rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="text-center">
+                    <img src="/static/pics/Contactme.png" class="img-fluid  " alt="Responsive image"
+                         style="width:20rem;height:4rem;">
+
+                </div>
+
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-2 rounded mt-4" style="background:black;">
+
+
+                <form>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:white;">Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name">
+                        </div>
+                        <label for="exampleInputEmail1" style="color:white;">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                               placeholder="Enter email">
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<script>
+    $('.carousel').carousel()
+
+    </script>
+
+<script>window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 1500);</script>
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>-->
+
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"-->
+<!--        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"-->
+<!--        crossorigin="anonymous"></script>-->
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
